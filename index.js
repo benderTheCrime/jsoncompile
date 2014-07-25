@@ -2,6 +2,7 @@
 (function() {
     "use strict";
     var fs = require('fs'),
+        open = require('open'),
         jsonName,
         htmlName,
         jsonFile,
@@ -31,9 +32,13 @@
             }
             else {
                 console.log("The file was saved!");
+                open(htmlFile, function (err) {
+                    if (err) {
+                        throw err;
+                    }
+                });
             }
         });
-        // TODO exrpess server to serve page
     });
 }());
 

@@ -1,6 +1,6 @@
 {
     "name": "jsoncompile",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Compiles JSON into HTML",
     "main": "index.js",
     "preferGlobal": "true",
@@ -13,6 +13,9 @@
         "html",
         "json"
     ],
+    "dependencies" : {
+        "open": "0.0.5"
+    },
     "author": "Joe Groseclose",
     "license": "MIT License",
     "bugs": {
