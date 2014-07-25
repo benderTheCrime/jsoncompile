@@ -1,0 +1,18 @@
+{
+    "html": {
+        "children":{
+            "head": {
+                "attributes": {
+                    "id": "my-id"
+                }
+            },
+            "body": {
+                "children": {
+                    "div": {
+                        "content": "Bonjour Y'all!"
+                    }
+                }
+            }
+        }
+    }
+}
