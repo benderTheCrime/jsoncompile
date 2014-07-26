@@ -4,6 +4,13 @@
             "head": {
                 "attributes": {
                     "id": "my-id"
+                },
+                "children": {
+                    "link": {
+                        "attributes": {
+                            "href": "index.css"
+                        }
+                    }
                 }
             },
             "body": {

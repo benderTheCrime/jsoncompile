@@ -53,7 +53,12 @@ function aggregate(obj) {
                     + obj[key]['attributes'][attribute] + '\'';
             }
         }
-        keyString += '<' + key + (att || '') + '>';
+        if (key === 'input' || key === 'link') {
+            keyString += '<' + key + (att || '') + '/>';
+        }
+        else {
+            keyString += '<' + key + (att || '') + '>';
+        }
         att = null;
         if (obj[key]['children']) {
             keyString += aggregate(obj[key]['children']);
@@ -61,7 +66,9 @@ function aggregate(obj) {
         if (obj[key]['content']) {
             keyString += obj[key]['content'];
         }
-        keyString += '</' + key + '>';
+        if (key !== 'input' && key !== 'link') {
+            keyString += '</' + key + '>';
+        }
     }
     return keyString;
 }
