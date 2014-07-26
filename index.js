@@ -3,8 +3,9 @@
     "use strict";
     var fs = require('fs'),
         open = require('open'),
-        jsonName,
-        htmlName,
+        cwd = process.cwd(),
+        jsonName = null,
+        htmlName = null,
         jsonFile,
         htmlFile,
         htmlString = '<!DOCTYPE html>';
@@ -17,8 +18,12 @@
             htmlName = file;
         }
     }
-    var jsonFile = __dirname + '/' + jsonName,
-        htmlFile = __dirname + '/' + htmlName;
+    if (!jsonName || !htmlName) {
+        console.log('Invalid JSON or HTML file names');
+        return;
+    }
+    var jsonFile = cwd + '/' + jsonName,
+        htmlFile = cwd + '/' + htmlName;
     fs.readFile(jsonFile, 'utf8', function (err, data) {
         if (err) {
             console.log('Error: ' + err);
