@@ -1,6 +1,6 @@
 {
     "name": "jsoncompile",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Compiles JSON into HTML",
     "main": "index.js",
     "preferGlobal": "true",
